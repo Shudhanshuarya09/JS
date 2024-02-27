@@ -1,13 +1,9 @@
-const student = {
-  fullName: "Shudhanshu Arya",
-  age: 20,
-  cgpa: 8.9,
-  isPass: true,
-};
+//unary operator
+let a = 5;
+let b = 2;
 
-
-//if you want to re-declared value you can write like this
-student["fullName"] = "Shudhanhshu Sekhar";
-
-// console.log(student["cgpa"]);
-console.log(student.fullName);
+console.log("a =", a, "& b =", b);
+console.log( a++);
+console.log( a++);
+console.log( ++a);
+console.log( a);
