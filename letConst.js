@@ -23,3 +23,7 @@ console.log(salary);
   let marks = 70;
   console.log(marks);
 }
+
+
+let cgpa;  //--> let can be written without assiging any value but const can not.
+console.log(cgpa);
