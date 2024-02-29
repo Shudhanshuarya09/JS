@@ -1,5 +1,8 @@
 let marks = prompt("Enter your marks");
 
+// let marks;
+// console.log("Enter your marks = ", marks);
+
 if (marks >= 90)
 {
   console.log("Grade of student is A");
@@ -12,7 +15,7 @@ else if (marks >= 60)
 {
   console.log("Grade of student is C");
 }
-else if (marks >= 50)
+else if (  marks >= 50)
 {
   console.log("Grade of student is D");
 }
