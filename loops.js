@@ -18,7 +18,7 @@ for(let i = 1; i<= 50; i++)
 
 
  //while loop
- let i =1;
+//  let i =1;
  while (i<=3)
 {
   console.log("hello");
