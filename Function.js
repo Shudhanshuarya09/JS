@@ -18,7 +18,10 @@ myFunction(" I love JS" , 1000);
 
 function sum(x , y)
 {
-  console.log(x + y);
+  console.log(x + y);  //<==> return x + y;  ---> bas retirn ke neeche ka code execute nhi hota {} ke andr tk
 }
 
 sum(1 , 2);
+
+//single line code 
+const printHello = () => console.log("Hello");
