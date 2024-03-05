@@ -6,8 +6,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+    rel="stylesheet" />
+
   <body class="bg-purple-900">
-    <h1 class="font-bold text-center text-5xl p-3">Tic-Tac-Toe Game</h1>
+    <h1
+      class="font-bold text-center text-5xl p-2 underline text-opacity-90 text-white">
+      Tic-Tac-Toe Game
+    </h1>
     <div class="flex space-x-8 px-80 pt-8">
       <button
         class="box hover:bg-purple-400 p-12 text-3xl border-double border-4">
@@ -48,6 +57,12 @@
       <button
         class="b0x hover:bg-purple-400 p-12 text-3xl border-double border-4">
         box9
+      </button>
+    </div>
+    <div class="text-center pt-2">
+      <button
+        class="text-2xl tracking-wider rounded-2xl 2xl p-3 font-bold bg-purple-500 hover:bg-pink-400">
+        Reset Game
       </button>
     </div>
   </body>
