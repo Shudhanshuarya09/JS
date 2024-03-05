@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,90 +6,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
   </head>
-  <body>
-    <div class="bg-purple-700">
-      <h1 class="font-bold text-center text-5xl p-3">Tic-Tac-Toe Game</h1>
-      <div class="items-center">
-        <button class="box hover:bg-purple-400 p-12 ">box1</button>
-        
-        <button class="box hover:bg-purple-500 p-12">box2</button>
-        <button class="b0x hover:bg-red-800"></button>
-        <!-- <button class="box">box3</button>
-        <button class="box">box4</button>
-        <button class="box">box5</button>
-        <button class="box">box6</button>
-        <button class="box">box7</button>
-        <button class="box">box8</button>
-        <button class="box">box9</button> -->
-      <!-- </div>
+  <body class="bg-purple-900">
+    <h1 class="font-bold text-center text-5xl p-3">Tic-Tac-Toe Game</h1>
+    <div class="flex space-x-28 px-64 pt-8">
+      <button class="box hover:bg-purple-400 p-12 text-3xl">box1</button>
+      <button class="box hover:bg-purple-500 p-12 text-3xl">box2</button>
+      <button class="b0x hover:bg-red-800 p-12 text-3xl">box3</button>
+    </div>
+    <div class="flex space-x-28 px-64 pt-4">
+      <button class="box hover:bg-purple-400 p-12 text-3xl">box4</button>
+      <button class="box hover:bg-purple-500 p-12 text-3xl">box5</button>
+      <button class="b0x hover:bg-red-800 p-12 text-3xl">box6</button>
+    </div>
+    <div class="flex space-x-28 px-64 pt-4">
+      <button class="box hover:bg-purple-400 p-12 text-3xl">box7</button>
+      <button class="box hover:bg-purple-500 p-12 text-3xl">box8</button>
+      <button class="b0x hover:bg-red-800 p-12 text-3xl">box9</button>
     </div>
   </body>
-</html> --> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tic Tac Toe</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    .square {
-      width: 100px;
-      height: 100px;
-    }
-  </style>
-</head>
-<body class="flex justify-center items-center h-screen bg-gray-200">
-  <div id="app" class="grid grid-cols-3 gap-2">
-    <div v-for="(square, index) in squares" :key="index" class="square flex justify-center items-center text-4xl bg-white border border-gray-300 cursor-pointer" @click="makeMove(index)">
-      {{ square }}
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
-        squares: Array(9).fill(null),
-        xIsNext: true,
-        winner: null
-      },
-      methods: {
-        makeMove(index) {
-          if (this.winner || this.squares[index]) return;
-
-          this.$set(this.squares, index, this.xIsNext ? 'X' : 'O');
-          if (this.calculateWinner()) {
-            this.winner = this.calculateWinner();
-          } else {
-            this.xIsNext = !this.xIsNext;
-          }
-        },
-        calculateWinner() {
-          const lines = [
-            [0, 1, 2],
-            [3, 4, 5],
-            [6, 7, 8],
-            [0, 3, 6],
-            [1, 4, 7],
-            [2, 5, 8],
-            [0, 4, 8],
-            [2, 4, 6]
-          ];
-
-          for (let i = 0; i < lines.length; i++) {
-            const [a, b, c] = lines[i];
-            if (this.squares[a] && this.squares[a] === this.squares[b] && this.squares[a] === this.squares[c]) {
-              return this.squares[a];
-            }
-          }
-
-          return null;
-        }
-      }
-    });
-  </script>
-</body>
 </html>
