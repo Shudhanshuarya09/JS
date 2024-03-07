@@ -1,5 +1,8 @@
 let boxes = document.querySelectorAll(".box");
 let restBtn = document.querySelector(".resetBtn");
+let newGameBtn = document.querySelector("#new-btn");
+let msgContainer = document.querySelector(".msg-conatiner");
+let msg = document.querySelector("#msg");
 
 let turnO = true;
 
