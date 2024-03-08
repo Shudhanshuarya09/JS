@@ -41,3 +41,15 @@ getData(1)
   console.log(res);
  
 });
+
+//callback Hell
+getData(1, () => {
+  console.log("getting daat2 ...");
+  getData(2, () => {
+    console.log("getting data3 ..");
+    getData(3, () => {
+      console,log("getting data4 ...");
+      getData(4);
+    });
+  });
+});
